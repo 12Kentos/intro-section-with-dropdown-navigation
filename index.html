@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <!-- Desktop Top bar Navigation/Mobile Top bar Navigation/Side bar navigation -->
+
+    <header class="header">
+      <img src="images/logo.svg" alt="Logo with word Snap" class="logo" />
+      <div class="mobile-nav">
+        <!-- Navigation List both Desktop and Mobile -->
+
+        <nav class="header__navigation">
+          <ul class="header__list">
+            <div class="arrow-list-container">
+              <li class="header__item warrow">
+                <a href="#" class="header__link">Features</a>
+                <img
+                  src="images/icon-arrow-down.svg"
+                  alt="Drop down arrow"
+                  class="dd-arrow"
+                />
+
+                <!-- Features Drop down List -->
+
+                <nav class="features__navigation visible__img">
+                  <ul class="features__list">
+                    <li class="features__item">
+                      <img
+                        src="images/icon-todo.svg"
+                        alt=""
+                        class="features__img"
+                      />
+                      <a href="#" class="features__text">Todo List</a>
+                    </li>
+                    <li class="features__item">
+                      <img
+                        src="images/icon-calendar.svg"
+                        alt=""
+                        class="features__img"
+                      />
+                      <a href="#" class="features__text">Calendar</a>
+                    </li>
+                    <li class="features__item">
+                      <img
+                        src="images/icon-reminders.svg"
+                        alt=""
+                        class="features__img"
+                      />
+                      <a href="#" class="features__text">Reminders</a>
+                    </li>
+                    <li class="features__item">
+                      <img
+                        src="images/icon-planning.svg"
+                        alt=""
+                        class="features__img"
+                      />
+                      <a href="#" class="features__text">Planning</a>
+                    </li>
+                  </ul>
+                </nav>
+              </li>
+            </div>
+
+            <div class="arrow-list-container">
+              <li class="header__item warrow">
+                <a href="#" class="header__link">Company</a>
+                <img
+                  src="images/icon-arrow-down.svg"
+                  alt="Drop down arrow"
+                  class="dd-arrow"
+                />
+
+                <!-- Company Drop down list -->
+
+                <nav
+                  class="features__navigation company__navigation visible__img"
+                >
+                  <ul class="features__list company__list">
+                    <li class="features__item company__item">
+                      <a href="#" class="features__text company__text"
+                        >History</a
+                      >
+                    </li>
+                    <li class="features__item company__item">
+                      <a href="#" class="features__text company__text"
+                        >Our Team</a
+                      >
+                    </li>
+                    <li class="features__item company__item">
+                      <a href="#" class="features__text company__text">Blog</a>
+                    </li>
+                  </ul>
+                </nav>
+              </li>
+            </div>
+
+            <!-- Remainder of Navigation List -->
+
+            <li class="header__item">
+              <a href="#" class="header__link">Careers</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">About</a>
+            </li>
+            <div class="customer-actions">
+              <li class="header__item">
+                <a href="#" class="header__link header__login">Login</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link header__button">Register</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Below class is for background effect when mobile nav is open -->
+
+      <div class="darken visible__img"></div>
+
+      <!-- Below code is for the menu buttons -->
+
+      <img
+        src="images/icon-menu.svg"
+        alt="Hamburger menu"
+        class="mobile-nav__img--open menu-button"
+      />
+      <img
+        src="images/icon-close-menu.svg"
+        alt="Close button"
+        class="mobile-nav__img--close menu-button visible__img"
+      />
+    </header>
+
+    <!-- Below code is the hero section of the website -->
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <picture>
+            <source
+              media="(max-width: 999px)"
+              srcset="images/image-hero-mobile.png 750w"
+            />
+            <source srcset="images/image-hero-desktop.png 960w" sizes="40vw" />
+            <img
+              src="images/image-hero-mobile.png"
+              alt="Guy holding laptop"
+              class="hero__img"
+            />
+          </picture>
+          <div class="hero__text-box">
+            <h1 class="heading-primary">
+              Make
+              <div class="span">remote work</div>
+            </h1>
+            <p class="hero__text">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <a href="#" class="hero__button">Learn more</a>
+
+            <!-- Below code is for the list of companies that use our product -->
+
+            <div class="hero__companies">
+              <img
+                src="images/client-databiz.svg"
+                alt="Databiz logo"
+                class="hero__companies__logo"
+              /><img
+                src="images/client-audiophile.svg"
+                alt="Audiophile logo"
+                class="hero__companies__logo"
+              /><img
+                src="images/client-meet.svg"
+                alt="Meet logo"
+                class="hero__companies__logo"
+              /><img
+                src="images/client-maker.svg"
+                alt="Maker logo"
+                class="hero__companies__logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

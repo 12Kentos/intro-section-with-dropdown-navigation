@@ -1,0 +1,282 @@
+.mobile-nav {
+  position: absolute;
+  top: -1.6rem;
+  right: -1.6rem;
+  width: 65vw;
+  min-height: 100vh;
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 8;
+}
+
+//////////////////////////////////////////////////////
+// Helper Code to make peicies appear and dissapear //
+//////////////////////////////////////////////////////
+
+.visible__img {
+  display: none;
+}
+
+.visible__nav {
+  display: flex;
+}
+
+.darken {
+  top: -1.6rem;
+  right: -1.6rem;
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-primary;
+  opacity: 0.7;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+.header {
+  &__navigation {
+    margin-left: 2.4rem;
+    margin-top: 7.8rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2.6rem;
+      color: $color-secondary;
+    }
+  }
+
+  &__button {
+    padding: 1.25rem 6.4rem;
+    border: 1px solid $color-primary;
+    border-radius: 1.4rem;
+  }
+}
+
+// .dd-arrow is for the dropdown arrows
+
+.header__item.active .dd-arrow {
+  transform: rotate(180deg);
+}
+
+.dd-arrow {
+  margin-left: 1.7rem;
+  transition: transform 0.5s ease-in;
+}
+
+// Customer-actions is for the login and register buttons in the navigation
+
+.customer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .header__item {
+    &:not(:last-child) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  & .header__item {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+// .features is for the features section of the navigation
+
+.features {
+  &__list {
+    list-style: none;
+    margin-left: 3.6rem;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    &:first-child {
+      margin-top: 2.4rem;
+    }
+  }
+  &__text {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.6rem;
+      color: $color-secondary;
+      margin-left: 1.55rem;
+    }
+  }
+}
+
+// Media Queries
+
+@media (min-width: 62.5em) {
+  .mobile-nav__img--open {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 12.5rem;
+    min-height: 2vh;
+    width: 85vw;
+  }
+
+  .header {
+    margin-top: 3.2rem;
+    margin-left: 4.1rem;
+    &__navigation {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0;
+    }
+    &__list {
+      flex-direction: row;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    &__button {
+      padding: 1.25rem 1.85rem;
+
+      &:hover {
+        border: 1.5px solid black;
+      }
+    }
+
+    &__login {
+      margin-top: 1rem;
+      margin-right: 4rem;
+    }
+
+    &__link {
+      &:hover,
+      &:active {
+        color: black;
+      }
+    }
+  }
+
+  .dd-arrow {
+    margin-left: 0.8rem;
+  }
+
+  .customer-actions {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  .customer-actions .header__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .section-hero {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: row-reverse;
+    max-width: 85vw;
+    margin-top: 8rem;
+
+    &__text-box {
+      max-width: 54rem;
+      text-align: left;
+    }
+
+    &__text {
+      max-width: 44.5rem;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      margin-bottom: 5.1rem;
+    }
+
+    &__button {
+      &:hover {
+        color: $color-primary;
+        background-color: #fff;
+        border: 1px solid $color-primary;
+      }
+    }
+
+    &__companies {
+      margin-top: 10.8rem;
+    }
+
+    &__img {
+      max-width: 100%;
+      margin-left: 12.5rem;
+    }
+  }
+
+  .heading-primary {
+    font-size: 8rem;
+    line-height: 8rem;
+    letter-spacing: -1.11px;
+    margin-bottom: 4.8rem;
+    display: block;
+  }
+
+  .features {
+    &__navigation {
+      position: fixed;
+      transform: translate(-6rem, 2rem);
+      box-shadow: 0 1rem 2rem rgba($color-primary 0.15);
+      width: 15.3rem;
+      height: 16rem;
+      border-radius: 1rem;
+    }
+
+    &__list {
+      margin: 2.4rem;
+    }
+
+    &__item {
+      margin-top: 0 !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  .company {
+    &__navigation {
+      transform: translate(0, 2rem);
+      width: 10.6rem;
+      height: 12.8rem;
+    }
+
+    &__list {
+      margin: 2.4rem auto;
+    }
+
+    &__item {
+      margin-top: 0 !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+}
